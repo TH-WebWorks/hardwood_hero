@@ -1,0 +1,462 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.nav-link {
+    color: rgb(255, 255, 255);
+    transition: color 0.3s ease;
+    text-align: center;
+}
+
+.nav-link:hover {
+    color: rgb(156, 163, 175);
+}
+
+.btn-quote {
+    background: rgb(220, 38, 38);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-quote:hover {
+    background: rgb(185, 28, 28);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+h1, p {
+    color: white;
+}
+
+nav {
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Form Styles */
+input, textarea, select {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+    transition: all 0.3s ease;
+}
+
+input::placeholder, textarea::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+input:focus, textarea:focus, select:focus {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgb(220, 38, 38) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.15);
+}
+
+/* Input Autofill Styles */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    -webkit-text-fill-color: white;
+    -webkit-box-shadow: 0 0 0px 1000px #1e1e1e inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Form Label Styles */
+.form-label {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Form Group Hover Effect */
+.form-group {
+    position: relative;
+}
+
+.form-group:hover input,
+.form-group:hover textarea {
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Loading Animation */
+.loading-dots {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.loading-dots span {
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    animation: bounce 0.5s infinite;
+}
+
+.loading-dots span:nth-child(2) { animation-delay: 0.1s; }
+.loading-dots span:nth-child(3) { animation-delay: 0.2s; }
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+}
+
+/* Toast Notification */
+.toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #1a1a1a;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.toast.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.toast svg {
+    width: 20px;
+    height: 20px;
+}
+
+.toast.success svg { color: rgb(34, 197, 94); }
+.toast.error svg { color: rgb(239, 68, 68); }
+
+/* Custom Select Styles */
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.5em;
+    padding-right: 2.5rem;
+}
+
+select option {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 1rem;
+}
+
+select:focus option:hover {
+    background-color: rgb(220, 38, 38);
+}
+
+/* Base styles */
+.nav-link {
+    color: rgb(255, 255, 255);
+    transition: color 0.3s ease;
+    text-align: center;
+}
+
+.btn-quote {
+    background: rgb(220, 38, 38);
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+/* Center all icons and text */
+.text-4xl, .text-2xl, .text-xl, p {
+    text-align: center;
+}
+
+.fas {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: flex;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+
+    .mobile-menu.hidden {
+        display: none;
+    }
+
+    .mobile-menu:not(.hidden) {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    
+    /* Typography */
+    h1.text-8xl {
+        font-size: 4rem !important;
+        line-height: 1.1;
+        text-align: center;
+    }
+    
+    .btn-quote {
+        width: calc(100% - 2rem);
+        margin: 0 auto;
+    }
+    
+    /* Center all text */
+    p, h1, h2, h3, h4, h5, h6, a {
+        text-align: center !important;
+    }
+    
+    /* Fix grid spacing */
+    .grid {
+        justify-items: center;
+        gap: 2rem !important;
+    }
+    
+    .grid > div {
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 0 !important;
+    }
+    
+    /* Fix image container heights */
+    .relative.h-60, 
+    .relative.h-80 {
+        height: 200px !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    /* Reduce spacing between sections */
+    .py-24 {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+    
+    .mb-24 {
+        margin-bottom: 2rem !important;
+    }
+    
+    /* Footer spacing */
+    footer {
+        margin-top: 2rem;
+    }
+    
+    .btn-quote {
+        display: block;
+        width: auto;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+}
+
+/* Tablet adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+    h1.text-8xl {
+        font-size: 6rem !important;
+    }
+    
+    .px-8 {
+        padding-left: 2rem !important;
+        padding-right: 2rem !important;
+    }
+}
+
+/* Mobile Menu Styles */
+.mobile-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    background: rgba(18, 18, 18, 0.98);
+}
+
+.mobile-menu > div {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.mobile-menu a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    transition: color 0.3s ease;
+}
+
+.mobile-menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: rgb(220, 38, 38);
+    transition: all 0.3s ease;
+}
+
+.mobile-menu a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.mobile-menu .btn-quote {
+    width: auto;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    transform-origin: center;
+}
+
+.mobile-menu .btn-quote:hover {
+    transform: scale(1.05);
+}
+
+#close-menu {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+#close-menu:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg);
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .text-center-mobile {
+        text-align: center !important;
+    }
+    
+    .grid {
+        justify-items: center;
+    }
+    
+    .grid > div {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .btn-quote {
+        display: block;
+        width: auto;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+}
+
+/* About page specific */
+.grid.md\:grid-cols-2 > div {
+    margin-bottom: 2rem;
+}
+
+.relative.h-80 {
+    height: 240px;
+}
+
+.relative.h-60 {
+    height: 200px;
+}
+
+.p-8 {
+    padding: 1.5rem;
+}
+
+.mb-24 {
+    margin-bottom: 3rem;
+}
+
+.pt-40 {
+    padding-top: 7rem;
+}
+
+/* Enhanced Fluid Typography */
+:root {
+    --fluid-min-width: 320;
+    --fluid-max-width: 1920;
+    --fluid-min-size: 14;
+    --fluid-max-size: 18;
+    --fluid-min-scale: 1.2;
+    --fluid-max-scale: 1.333;
+}
+
+/* Text scaling */
+.text-3xl { font-size: clamp(1.5rem, 4vw, 2rem); }
+.text-5xl { font-size: clamp(2rem, 6vw, 3rem); }
+.text-8xl { font-size: clamp(3rem, 10vw, 8rem); }
+.text-9xl { font-size: clamp(4rem, 12vw, 9rem); }
+
+/* Base text */
+p { font-size: clamp(1rem, 2vw, 1.125rem); }
+.text-xl { font-size: clamp(1.125rem, 2.5vw, 1.25rem); }
+
+/* Navigation */
+.nav-link { font-size: clamp(0.875rem, 1.5vw, 1rem); }
+
+/* Mobile menu links */
+.mobile-menu a { font-size: clamp(1.25rem, 4vw, 2rem); }
+
+/* Form text */
+input, textarea, select { font-size: clamp(0.875rem, 2vw, 1rem); }
+.form-label { font-size: clamp(0.8rem, 1.5vw, 0.9rem); }
+
+/* Footer text */
+footer p { font-size: clamp(0.875rem, 1.5vw, 1rem); }
+
+/* Fluid spacing */
+.p-8 { padding: clamp(1rem, 5vw, 2rem); }
+.px-8 { 
+    padding-left: clamp(1rem, 5vw, 2rem);
+    padding-right: clamp(1rem, 5vw, 2rem);
+}
+.py-24 { 
+    padding-top: clamp(2rem, 8vw, 6rem);
+    padding-bottom: clamp(2rem, 8vw, 6rem);
+}
+
+/* Fluid headings */
+h1 { font-size: clamp(2.5rem, 8vw, 6rem); }
+h2 { font-size: clamp(2rem, 5vw, 4rem); }
+h3 { font-size: clamp(1.5rem, 4vw, 3rem); }
+
+/* Fluid images and containers */
+.relative.h-60 { height: clamp(150px, 30vw, 240px); }
+.relative.h-80 { height: clamp(200px, 40vw, 320px); }
+
+/* Fluid grid gaps */
+.gap-8 { gap: clamp(1rem, 3vw, 2rem); }
+
+/* Fluid buttons */
+.btn-quote {
+    padding: clamp(0.75rem, 2vw, 1.5rem) clamp(1.5rem, 4vw, 3rem);
+    font-size: clamp(0.875rem, 2vw, 1.125rem);
+}
+
+/* Fluid margins */
+.mb-24 { margin-bottom: clamp(2rem, 6vw, 6rem); }
+.mt-12 { margin-top: clamp(1.5rem, 4vw, 3rem); }
+
+/* Fluid icons */
+.text-2xl { font-size: clamp(1.25rem, 3vw, 1.5rem); }
+.text-4xl { font-size: clamp(1.75rem, 4vw, 2.5rem); }

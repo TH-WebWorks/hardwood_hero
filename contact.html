@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Contact - Hardwood Hero</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body style="background-color: #121212;">
+    <!-- Background with darker overlay -->
+    <div class="fixed inset-0 overflow-hidden">
+        <img src="images/background.jpg" 
+            alt="Dark Wood Background" 
+            class="w-full h-full object-cover opacity-20 select-none pointer-events-none"
+            style="position: fixed;">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/95 to-black/95"></div>
+    </div>
+
+    <!-- Main content wrapper -->
+    <div class="relative z-100">
+        <!-- Nav section (same as other pages) -->
+        <nav class="fixed w-full z-50" style="background-color: rgba(18, 18, 18, 0.95);">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="flex justify-between items-center h-24">
+                    <a href="index.html" class="text-white text-3xl font-semibold">HARDWOOD HERO</a>
+                    <!-- Mobile Menu Button -->
+                    <button class="md:hidden text-white" id="mobile-menu-button">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                    <!-- Desktop Navigation -->
+                    <div class="hidden md:flex items-center bg-white/10 backdrop-blur-md rounded-full px-8 h-12">
+                        <a href="index.html" class="nav-link">HOME</a>
+                        <span class="w-1 h-1 bg-white/20 rounded-full mx-4"></span>
+                        <a href="services.html" class="nav-link">SERVICES</a>
+                        <span class="w-1 h-1 bg-white/20 rounded-full mx-4"></span>
+                        <a href="gallery.html" class="nav-link">GALLERY</a>
+                        <span class="w-1 h-1 bg-white/20 rounded-full mx-4"></span>
+                        <a href="about.html" class="nav-link">ABOUT</a>
+                        <span class="w-1 h-1 bg-white/20 rounded-full mx-4"></span>
+                        <a href="contact.html" class="nav-link">CONTACT</a>
+                    </div>
+                    <!-- Mobile Navigation -->
+                    <div class="mobile-menu hidden fixed inset-0 bg-black/95 z-50 md:hidden">
+                        <div class="flex flex-col items-center justify-center h-full space-y-8">
+                            <button class="absolute top-6 right-6 text-white" id="close-menu">
+                                <i class="fas fa-times text-2xl"></i>
+                            </button>
+                            <a href="index.html" class="text-white text-2xl">HOME</a>
+                            <a href="services.html" class="text-white text-2xl">SERVICES</a>
+                            <a href="gallery.html" class="text-white text-2xl">GALLERY</a>
+                            <a href="about.html" class="text-white text-2xl">ABOUT</a>
+                            <a href="contact.html" class="text-white text-2xl">CONTACT</a>
+                            <a href="quote.html" class="btn-quote mt-8">GET FREE QUOTE</a>
+                        </div>
+                    </div>
+                    <a href="quote.html" class="btn-quote hidden md:inline-block text-sm px-6 py-2">GET FREE QUOTE</a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="pt-40 pb-24">
+            <div class="max-w-7xl mx-auto px-8">
+                <h1 class="text-5xl font-semibold text-white mb-4">Contact Us</h1>
+                <p class="text-gray-400 text-xl mb-16">Get in touch with Hardwood Hero</p>
+
+                <div class="grid md:grid-cols-3 gap-12">
+                    <!-- Contact Form -->
+                    <div class="md:col-span-2 bg-[#121212] p-8" style="background: #121212; border: 2px solid #121212;">
+                        <form id="contact-form" data-form="contact">
+                            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label class="block text-white mb-2">First Name</label>
+                                    <input type="text" name="firstName" class="w-full bg-[#1a1a1a] text-white p-3 rounded-lg">
+                                </div>
+                                <div>
+                                    <label class="block text-white mb-2">Last Name</label>
+                                    <input type="text" name="lastName" class="w-full bg-[#1a1a1a] text-white p-3 rounded-lg">
+                                </div>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label class="block text-white mb-2">Email</label>
+                                    <input type="email" name="email" class="w-full bg-[#1a1a1a] text-white p-3 rounded-lg">
+                                </div>
+                                <div>
+                                    <label class="block text-white mb-2">Phone</label>
+                                    <input type="tel" name="phone" class="w-full bg-[#1a1a1a] text-white p-3 rounded-lg">
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-white mb-2">Message</label>
+                                <textarea name="message" rows="4" class="w-full bg-[#1a1a1a] text-white p-3 rounded-lg"></textarea>
+                            </div>
+                            <button type="submit" class="btn-quote">SEND MESSAGE</button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="space-y-8">
+                        <div class="bg-[#121212] p-8" style="background: #121212; border: 2px solid #121212;">
+                            <div class="text-4xl text-white mb-6">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold text-white mb-4">Phone</h3>
+                            <p class="text-gray-400">(515) 339-1629</p>
+                        </div>
+
+                        <div class="bg-[#121212] p-8" style="background: #121212; border: 2px solid #121212;">
+                            <div class="text-4xl text-white mb-6">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold text-white mb-4">Email</h3>
+                            <p class="text-gray-400">JeradTjaden@gmail.com</p>
+                        </div>
+
+                        <div class="bg-[#121212] p-8" style="background: #121212; border: 2px solid #121212;">
+                            <div class="text-4xl text-white mb-6">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold text-white mb-4">Location</h3>
+                            <p class="text-gray-400">Des Moines, Iowa</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Section -->
+                <div class="bg-[#121212] rounded-2xl p-12 text-center mt-24 mb-24">
+                    <h2 class="text-3xl font-semibold text-white mb-4">Ready to Transform Your Floors?</h2>
+                    <p class="text-gray-400 mb-8">Let's discuss your hardwood flooring project.</p>
+                    <a href="quote.html" class="btn-quote inline-block">GET FREE QUOTE</a>
+                </div>
+            </div>
+        </main>
+
+        <footer class="bg-[#121212] py-16">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="grid md:grid-cols-3 gap-12">
+                    <div>
+                        <h3 class="text-xl font-semibold text-white mb-4">Hardwood Hero</h3>
+                        <p class="text-gray-400">Professional hardwood flooring services for your home.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-white mb-4">Contact</h3>
+                        <p class="text-gray-400">(515) 339-1629<br>JeradTjaden@gmail.com</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-white mb-4">Follow Us</h3>
+                        <div class="flex justify-center gap-4">
+                            <a href="https://www.facebook.com/HardwoodHeroDSM/" class="text-gray-400 hover:text-white transition-colors text-2xl">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 

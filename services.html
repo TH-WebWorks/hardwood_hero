@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Services - Hardwood Hero</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body style="background-color: #121212;">
+    <!-- Background with darker overlay -->
+    <div class="fixed inset-0 overflow-hidden">
+        <img src="images/background.jpg" 
+            alt="Dark Wood Background" 
+            class="w-full h-full object-cover opacity-20 select-none pointer-events-none"
+            style="position: fixed;">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/95 to-black/95"></div>
+    </div>
+
+    <!-- Main content wrapper -->
+    <div class="relative z-100">
+        <nav class="fixed w-full z-50" style="background-color: rgba(18, 18, 18, 0.95);">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="flex justify-between items-center h-24">
+                    <a href="index.html" class="text-white text-3xl font-semibold">HARDWOOD HERO</a>
+                    <!-- Mobile Menu Button -->
+                    <button class="md:hidden text-white" id="mobile-menu-button">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                    <!-- Desktop Navigation -->
+                    <div class="hidden md:flex items-center bg-white/10 backdrop-blur-md rounded-full px-8 h-12">
+                        <a href="index.html" class="nav-link">HOME</a>
+                        <span class="w-1 h-1 bg-white/20 rounded-full mx-4"></span>
+                        <a href="services.html" class="nav-link">SERVICES</a>
+                        <span class="w-1 h-1 bg-white/20 rounded-full mx-4"></span>
+                        <a href="gallery.html" class="nav-link">GALLERY</a>
+                        <span class="w-1 h-1 bg-white/20 rounded-full mx-4"></span>
+                        <a href="about.html" class="nav-link">ABOUT</a>
+                        <span class="w-1 h-1 bg-white/20 rounded-full mx-4"></span>
+                        <a href="contact.html" class="nav-link">CONTACT</a>
+                    </div>
+                    <!-- Mobile Navigation -->
+                    <div class="mobile-menu hidden fixed inset-0 bg-black/95 z-50 md:hidden">
+                        <div class="flex flex-col items-center justify-center h-full space-y-8">
+                            <button class="absolute top-6 right-6 text-white" id="close-menu">
+                                <i class="fas fa-times text-2xl"></i>
+                            </button>
+                            <a href="index.html" class="text-white text-2xl">HOME</a>
+                            <a href="services.html" class="text-white text-2xl">SERVICES</a>
+                            <a href="gallery.html" class="text-white text-2xl">GALLERY</a>
+                            <a href="about.html" class="text-white text-2xl">ABOUT</a>
+                            <a href="contact.html" class="text-white text-2xl">CONTACT</a>
+                            <a href="quote.html" class="btn-quote mt-8">GET FREE QUOTE</a>
+                        </div>
+                    </div>
+                    <a href="quote.html" class="btn-quote hidden md:inline-block text-sm px-6 py-2">GET FREE QUOTE</a>
+                </div>
+            </div>
+        </nav>
+
+        <main class="pt-40 pb-24">
+            <div class="max-w-7xl mx-auto px-8">
+                <h1 class="text-5xl font-semibold text-white mb-4">Our Services</h1>
+                <p class="text-gray-400 text-xl mb-16">Professional hardwood flooring solutions</p>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-24">
+                    <div class="bg-[#121212] p-8" style="background: #121212; border: 2px solid #121212;">
+                        <div class="text-4xl text-white mb-6">
+                            <i class="fas fa-hammer"></i>
+                        </div>
+                        <h2 class="text-3xl font-semibold text-white mb-8">Installation</h2>
+                        <p class="text-gray-400 mb-6">Expert installation of new hardwood floors. We handle everything from subfloor preparation to final finishing.</p>
+                        <ul class="text-gray-400 list-disc pl-6 mb-6">
+                            <li>Subfloor preparation</li>
+                            <li>Professional installation</li>
+                            <li>Multiple wood species available</li>
+                            <li>Thorough cleanup and final inspection</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-[#121212] p-8" style="background: #121212; border: 2px solid #121212;">
+                        <div class="text-4xl text-white mb-6">
+                            <i class="fas fa-brush"></i>
+                        </div>
+                        <h2 class="text-3xl font-semibold text-white mb-8">Refinishing</h2>
+                        <p class="text-gray-400 mb-6">Restore your existing hardwood floors to their original beauty. Transform worn floors into stunning centerpieces.</p>
+                        <ul class="text-gray-400 list-disc pl-6 mb-6">
+                            <li>Sanding and surface preparation</li>
+                            <li>Staining options available</li>
+                            <li>Professional finishing techniques</li>
+                            <li>Protective coating application</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- CTA Section -->
+                <div class="bg-[#121212] rounded-2xl p-12 text-center mb-24">
+                    <h2 class="text-3xl font-semibold text-white mb-4">Ready to Transform Your Floors?</h2>
+                    <p class="text-gray-400 mb-8">Let's discuss your hardwood flooring project.</p>
+                    <a href="quote.html" class="btn-quote inline-block">GET FREE QUOTE</a>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-[#121212] py-16">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="grid md:grid-cols-3 gap-12">
+                    <div>
+                        <h3 class="text-xl font-semibold text-white mb-4">Hardwood Hero</h3>
+                        <p class="text-gray-400">Professional hardwood flooring services for your home.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-white mb-4">Contact</h3>
+                        <p class="text-gray-400">(515) 339-1629<br>JeradTjaden@gmail.com</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-white mb-4">Follow Us</h3>
+                        <div class="flex justify-center gap-4">
+                            <a href="https://www.facebook.com/HardwoodHeroDSM/" class="text-gray-400 hover:text-white transition-colors text-2xl">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

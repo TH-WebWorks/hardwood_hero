@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>About - Hardwood Hero</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body style="background-color: #121212;">
+    <!-- Background with darker overlay -->
+    <div class="fixed inset-0 overflow-hidden">
+        <img src="images/background.jpg" 
+            alt="Dark Wood Background" 
+            class="w-full h-full object-cover opacity-20 select-none pointer-events-none"
+            style="position: fixed;">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/95 to-black/95"></div>
+    </div>
+
+    <!-- Nav section (same as other pages) -->
+    <nav class="fixed w-full z-50" style="background-color: rgba(18, 18, 18, 0.95);">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="flex justify-between items-center h-24">
+                <a href="index.html" class="text-white text-3xl font-semibold">HARDWOOD HERO</a>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-white" id="mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center bg-white/10 backdrop-blur-md rounded-full px-8 h-12">
+                    <a href="index.html" class="nav-link">HOME</a>
+                    <span class="w-1 h-1 bg-white/20 rounded-full mx-4"></span>
+                    <a href="services.html" class="nav-link">SERVICES</a>
+                    <span class="w-1 h-1 bg-white/20 rounded-full mx-4"></span>
+                    <a href="gallery.html" class="nav-link">GALLERY</a>
+                    <span class="w-1 h-1 bg-white/20 rounded-full mx-4"></span>
+                    <a href="about.html" class="nav-link">ABOUT</a>
+                    <span class="w-1 h-1 bg-white/20 rounded-full mx-4"></span>
+                    <a href="contact.html" class="nav-link">CONTACT</a>
+                </div>
+                <!-- Mobile Navigation -->
+                <div class="mobile-menu hidden fixed inset-0 bg-black/95 z-50 md:hidden">
+                    <div class="flex flex-col items-center justify-center h-full space-y-8">
+                        <button class="absolute top-6 right-6 text-white" id="close-menu">
+                            <i class="fas fa-times text-2xl"></i>
+                        </button>
+                        <a href="index.html" class="text-white text-2xl">HOME</a>
+                        <a href="services.html" class="text-white text-2xl">SERVICES</a>
+                        <a href="gallery.html" class="text-white text-2xl">GALLERY</a>
+                        <a href="about.html" class="text-white text-2xl">ABOUT</a>
+                        <a href="contact.html" class="text-white text-2xl">CONTACT</a>
+                        <a href="quote.html" class="btn-quote mt-8">GET FREE QUOTE</a>
+                    </div>
+                </div>
+                <a href="quote.html" class="btn-quote hidden md:inline-block text-sm px-6 py-2">GET FREE QUOTE</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content wrapper -->
+    <div class="relative z-100">
+        <!-- Nav section stays the same -->
+        
+        <main class="pt-40 pb-24">
+            <div class="max-w-7xl mx-auto px-8">
+                <h1 class="text-5xl font-semibold text-white mb-4">About Us</h1>
+                <p class="text-gray-400 text-xl mb-8">Learn more about Hardwood Hero</p>
+                
+                <!-- About Content Grid -->
+                <div class="grid md:grid-cols-2 gap-8 mb-24">
+                    <div class="bg-[#121212] p-8" style="background: #121212; border: 2px solid #121212;">
+                        <div class="relative h-80 overflow-hidden mb-8">
+                            <img src="images/placeholder.png" alt="Jerad at Work" class="w-full h-full object-cover">
+                        </div>
+                        <h2 class="text-3xl font-semibold text-white mb-8">Our Story</h2>
+                        <p class="text-gray-400 mb-6">Founded with a passion for craftsmanship and dedication to quality, Hardwood Hero has been serving the Des Moines area for over two decades...</p>
+                    </div>
+
+                    <div class="bg-[#121212] p-8" style="background: #121212; border: 2px solid #121212;">
+                        <div class="relative h-80 overflow-hidden mb-8">
+                            <img src="images/hardwood_hero_pfp.png" alt="Jerad with Team" class="w-full h-full object-cover">
+                        </div>
+                        <h2 class="text-3xl font-semibold text-white mb-8">Our Mission</h2>
+                        <p class="text-gray-400 mb-6">Dedicated to delivering exceptional quality and customer service on every project, transforming homes one floor at a time...</p>
+                    </div>
+                </div>
+
+                <!-- History Section -->
+                <div class="col-span-3 mb-24">
+                    <div class="bg-[#121212] p-8" style="background: #121212; border: 2px solid #121212;">
+                        <h2 class="text-3xl font-semibold text-white mb-8">Our History</h2>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div class="space-y-4 bg-[#121212] p-6" style="background: #121212; border: 2px solid #121212;">
+                                <div class="relative h-80 overflow-hidden">
+                                    <img src="images/jerad_trailer.jpg" alt="Jerad Tjaden" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                            <div class="space-y-4 bg-[#121212] p-6" style="background: #121212; border: 2px solid #121212;">
+                                <p class="text-gray-400 leading-relaxed">
+                                    Legend has it that in 2003, Jerad Tjaden discovered his superpower when a mysterious industrial sander sparked to life in his hands. After years of honing his powers - installing, sanding, and finishing hardwood floors for others - he knew it was time. In 2014, Hardwood Hero emerged, ready to battle the forces of worn-out floors across the Des Moines area.
+                                    <br><br>
+                                    As owner and operator of Hardwood Hero, Jerad wields only the highest quality products in his arsenal. Like any true hero, he keeps his operation small and efficient, passing the savings on to the citizens of Des Moines.
+                                    <br><br>
+                                    Some say he can sense a squeaky floorboard from miles away...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Values Grid -->
+                <div class="grid md:grid-cols-3 gap-8 mb-24">
+                    <div class="bg-[#121212] p-8" style="background: #121212; border: 2px solid #121212;">
+                        <div class="relative h-60 overflow-hidden mb-6">
+                            <img src="images/placeholder.png" alt="Quality Work Example" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white mb-4">Quality</h3>
+                        <p class="text-gray-400">We never compromise on materials or workmanship.</p>
+                    </div>
+
+                    <div class="bg-[#121212] p-8" style="background: #121212; border: 2px solid #121212;">
+                        <div class="relative h-60 overflow-hidden mb-6">
+                            <img src="images/placeholder.png" alt="Customer Service" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white mb-4">Integrity</h3>
+                        <p class="text-gray-400">Honest communication and transparent pricing.</p>
+                    </div>
+
+                    <div class="bg-[#121212] p-8" style="background: #121212; border: 2px solid #121212;">
+                        <div class="relative h-60 overflow-hidden mb-6">
+                            <img src="images/placeholder.png" alt="Service Example" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-2xl font-semibold text-white mb-4">Service</h3>
+                        <p class="text-gray-400">Customer satisfaction is our top priority.</p>
+                    </div>
+                </div>
+
+                <!-- CTA Section -->
+                <section class="py-24">
+                    <div class="max-w-7xl mx-auto px-8">
+                        <div class="bg-[#121212] rounded-2xl p-12 text-center mb-24">
+                            <h2 class="text-3xl font-semibold text-white mb-4">Ready to Transform Your Floors?</h2>
+                            <p class="text-gray-400 mb-8">Let's discuss your hardwood flooring project.</p>
+                            <a href="quote.html" class="btn-quote inline-block">GET FREE QUOTE</a>
+                        </div>
+                    </div>
+                </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-[#121212] py-16">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="grid md:grid-cols-3 gap-12">
+                    <div>
+                        <h3 class="text-xl font-semibold text-white mb-4">Hardwood Hero</h3>
+                        <p class="text-gray-400">Professional hardwood flooring services for your home.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-white mb-4">Contact</h3>
+                        <p class="text-gray-400">(515) 339-1629<br>JeradTjaden@gmail.com</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-white mb-4">Follow Us</h3>
+                        <div class="flex justify-center gap-4">
+                            <a href="https://www.facebook.com/HardwoodHeroDSM/" class="text-gray-400 hover:text-white transition-colors text-2xl">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html> 
